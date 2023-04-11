@@ -3,22 +3,23 @@ package handler
 import (
 	"net/http"
 
+	"order/internal/logic"
+	"order/internal/svc"
+	"order/internal/types"
+
 	"github.com/zeromicro/go-zero/rest/httpx"
-	"user/internal/logic"
-	"user/internal/svc"
-	"user/internal/types"
 )
 
-func UserHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func GetOrderHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.Request
+		var req types.OrderReq
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := logic.NewUserLogic(r.Context(), svcCtx)
-		resp, err := l.User(&req)
+		l := logic.NewGetOrderLogic(r.Context(), svcCtx)
+		resp, err := l.GetOrder(&req)
 		if err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 		} else {

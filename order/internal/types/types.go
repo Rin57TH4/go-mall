@@ -8,3 +8,13 @@ type Request struct {
 type Response struct {
 	Message string `json:"message"`
 }
+
+type OrderReq struct {
+	Id string `path:"id"`
+}
+
+type OrderReply struct {
+	Id       string `json:"id"`
+	Name     string `json:"name"`
+	UserName string `json:"userName"`
+}
