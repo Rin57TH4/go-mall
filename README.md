@@ -45,3 +45,6 @@ gen xong go mod tidy lai neu can
 Gen order api.
 goctl api go -api order.api -dir ./gen
 
+
+Gen model
+goctl model mysql ddl -src user.sql -dir . -c

@@ -1,8 +1,8 @@
 package svc
 
 import (
-	"order/internal/config"
 	"rpc-common/userclient"
+	"userapi/internal/config"
 
 	"github.com/zeromicro/go-zero/zrpc"
 )

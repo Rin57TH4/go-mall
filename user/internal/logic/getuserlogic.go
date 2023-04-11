@@ -2,9 +2,9 @@ package logic
 
 import (
 	"context"
+	"rpc-common/types/user"
 
 	"user/internal/svc"
-	"user/types/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

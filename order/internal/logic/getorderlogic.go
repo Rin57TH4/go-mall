@@ -2,7 +2,7 @@ package logic
 
 import (
 	"context"
-	"user/userclient"
+	"rpc-common/userclient"
 
 	"order/internal/svc"
 	"order/internal/types"

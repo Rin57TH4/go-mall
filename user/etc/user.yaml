@@ -4,3 +4,5 @@ Etcd:
   Hosts:
   - 127.0.0.1:2379
   Key: user.rpc
+Mysql:
+  DataSrouce: root:root@tcp(127.0.0.1:3309)/go_mall?charset=utf8mb4&parseTime=true&loc=Asian/Ho_Chi_Minh
